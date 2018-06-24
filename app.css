@@ -33,6 +33,6 @@ div.tile {
     min-height: 100px;
     /* width: 100px; */
     margin: 15px;
-    background: red;
+    /* background-color: red; */
     /* display: inline-block; */
 }
