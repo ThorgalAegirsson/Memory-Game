@@ -13,17 +13,23 @@
     <body>
 
         <header>
-            <h1>Game of Color</h1>
-            <h3>version 1.0</h3>
+            <h1>Memory Game</h1>
+            <h5>version 2.0</h3>
         </header>
         <div class="controls">
             <button id="newGameBtn">New Game</button>
             <button id="resetBtn">Reset</button>
-            <button id="easyBtn">Easy</button>
-            <button id="hardBtn">Hard</button>
+            <button class="marginLeft mode">EASY</button>
+            <label class="switch">
+                <input type="checkbox">
+                <span class="slider round"></span>
+            </label>
+            <button class="mode">HARD</button>
         </div>
         <div class="score">
-            <p>Score: <span id="scoreCount">0</span></p>
+            <p>Score:
+                <span id="scoreCount">0</span> 
+            </p>
         </div>
         <div class="main">
             <div class="tile" data-shown="0"></div>
@@ -32,6 +38,16 @@
             <div class="tile" data-shown="0"></div>
             <div class="tile" data-shown="0"></div>
             <div class="tile" data-shown="0"></div>
+            <div class="tile tileHard hide" data-shown="0"></div>
+            <div class="tile tileHard hide" data-shown="0"></div>
+            <div class="tile tileHard hide" data-shown="0"></div>
+            <div class="tile tileHard hide" data-shown="0"></div>
+            <div class="tile tileHard hide" data-shown="0"></div>
+            <div class="tile tileHard hide" data-shown="0"></div>
+            <div class="tile tileHard hide" data-shown="0"></div>
+            <div class="tile tileHard hide" data-shown="0"></div>
+            <div class="tile tileHard hide" data-shown="0"></div>
+            <div class="tile tileHard hide" data-shown="0"></div>
         </div>
         <footer>
             <p>2018 &copy; ESAR Enterprises</p>
