@@ -25,9 +25,10 @@ header h1 {
 
 .controls {
     display: flex;
-    width: 600px;
+    width: 90%;
+    max-width: 600px;
     margin: 10px auto;
-    font-size: 1.4em;
+    font-size: 1.4rem;
     color: #2196F3;
 }
 
@@ -52,7 +53,7 @@ button {
     background-color: #2196F3;
     border: none;
     border-radius: 34px;
-    font-size: 1.4rem;
+    font-size: 1em;
     margin: 0 10px;
     padding: 5px 15px;
     color: white;
@@ -67,7 +68,7 @@ footer {
     margin: 0;
     padding: 0;
     width: 100vw;
-    position: absolute;
+    /* position: fixed; */
     bottom: 20px;
 }
 
@@ -130,10 +131,11 @@ input:checked + .slider:before {
     background: rgb(127, 170, 218);
     border-radius: 10px;
     margin: 25px auto;
-    width: 620px;
+    width: 90%;
+    max-width: 620px;
     padding: 10px;
     display: grid;
-    grid-template-columns: 200px 200px 200px;
+    grid-template-columns: repeat(3, 33%);
 }
 
 div.tile {
@@ -155,8 +157,9 @@ linear-gradient(45deg, #343702 0%, #184500 20%, #187546 30%, #006782 40%, #0b128
     /* display: inline-block; */
 }
 .hard {
-    width: 800px;
-    grid-template-columns: repeat(4, 200px); 
+    /* width: 90%; */
+    /* max-width: 620px; */
+    grid-template-columns: repeat(4, 25%); 
 }
 
 .tileHard.hide {
@@ -166,4 +169,10 @@ linear-gradient(45deg, #343702 0%, #184500 20%, #187546 30%, #006782 40%, #0b128
 /* .selected {
     font-weight: bold;
     background: blue;
-} */
+} */ 
+
+@media screen and (max-width: 480px) {
+    .controls {
+        font-size: 0.8rem;
+    }
+}
