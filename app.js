@@ -2,6 +2,9 @@
     const init = () => {
         // console.log('started');
         //DOM references
+        const overlay = document.querySelector(".overlay");
+        const yourScore = document.querySelector('#yourScore');
+        const endBtn = overlay.querySelector('.end');
         const newGameBtn = document.getElementById('newGameBtn');
         const resetBtn = document.getElementById('resetBtn');
         // const easyBtn = document.getElementById('easyBtn');
@@ -178,8 +181,17 @@ linear-gradient(45deg, #343702 0%, #184500 20%, #187546 30%, #006782 40%, #0b128
                 mode.disabled = false;
             },
             over() {
-                alert(`Game over!\nYou scored ${score} points`);
-                this.reset();
+                const endGame = () => {
+                    yourScore.innerText = '';
+                    overlay.style.display = 'none';
+                    endBtn.removeEventListener('click', endGame);
+                    newGame.reset();
+                }
+                overlay.style.display = 'block';
+                yourScore.innerText = score;
+                endBtn.addEventListener('click', endGame, false);
+                //replace with modal
+                // this.reset();
             }
         };
         // const newGame = new Game();
